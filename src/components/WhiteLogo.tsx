@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 
 export const WhiteLogo = () => {
   return (
@@ -9,18 +9,23 @@ export const WhiteLogo = () => {
       }}>
       <Image
         source={require('../assets/tres.png')}
-        style={{
-          width: 130,
+        style={styles.logo}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  logo:{
+    width: 130,
           height: 110,
-          shadowColor: 'rgba(242, 243, 244)',
+          shadowColor: '#000',
           shadowOffset: {
             width: 0,
             height: 5,
           },
           shadowOpacity: 0.34,
           shadowRadius: 4.27,
-        }}
-      />
-    </View>
-  );
-};
+       
+  }
+})

@@ -18,7 +18,7 @@ import {homeStyle} from '../theme/homeTheme';
 
 interface Props extends StackScreenProps<any, any> {}
 
-const baseUrl = 'http://localhost:8080/api';
+const baseUrl = 'http://192.168.0.102:8080/api';
 
 
 

@@ -31,7 +31,7 @@ export const ResultsScreen = ({navigation})=> {
 
   const getPerson = async () => {
     axios
-      .get('http://localhost:8080/api/persons')
+      .get('http://192.168.0.102:8080/api/persons')
       
 
       .then(resp => {

@@ -1,14 +1,14 @@
+import com.android.build.OutputFile
+
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 project.ext.vectoricons = [
-    iconFontNames: [ 'Ionicons.ttf'] // Name of the font files you want to copy
+    iconFontNames: ['Ionicons.ttf'] // Name of the font files you want to copy
 ]
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
-import com.android.build.OutputFile
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -124,6 +124,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('your_key_name.keystore')
+            storePassword 'your_key_store_password'
+            keyAlias 'your_key_alias'
+            keyPassword 'your_key_file_alias_password'
+    }
     }
     buildTypes {
         debug {
@@ -135,6 +141,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
 

@@ -34,7 +34,7 @@ export const homeStyle = StyleSheet.create({
   buttonContainer: {
     alignItems: 'center',
     paddingVertical: 5,
-    shadowColor: 'rgba(242, 243, 244)',
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 5,
